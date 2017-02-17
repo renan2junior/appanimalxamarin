@@ -7,6 +7,11 @@ namespace AppAnimalForms.Views
 		public PetsUsuarioPage()
 		{
 			InitializeComponent();
+
+			PetWS petws = new PetWS();
+
+			listView.ItemsSource = petws.GetPets();
+
 		}
 	}
 }
