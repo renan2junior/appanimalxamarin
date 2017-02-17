@@ -5,7 +5,7 @@
 		prism:ViewModelLocator.AutowireViewModel="True"
 		xmlns:local="clr-namespace:AppAnimalForms.Views;assembly=AppAnimalForms"
 		x:Class="AppAnimalForms.Views.MainPage"
-		Title="MainPage" 
+		Title="Menu Principal" 
 		 >
 	<MasterDetailPage.Master>
 		 		<local:MasterPage x:Name="masterPage" Title="Menu"/>

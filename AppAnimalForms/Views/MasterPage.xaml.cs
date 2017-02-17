@@ -28,7 +28,7 @@ namespace AppAnimalForms.Views
 			masterPageItens.Add(new MasterPageItem
 			{
 				Title = "Meus Dados",
-				IconSource = "contacts.png",
+				IconSource = "ic_work_white_24dp.png",
 				TargetType = typeof(DadosUsuarioPage)
 			});
 
