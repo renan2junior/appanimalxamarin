@@ -2,12 +2,11 @@
 
 namespace AppAnimalForms.Views
 {
-	public partial class PetsUsuarioPage : ContentPage
+	public partial class DadosPetPage : ContentPage
 	{
-		public PetsUsuarioPage()
+		public DadosPetPage()
 		{
 			InitializeComponent();
 		}
 	}
 }
-

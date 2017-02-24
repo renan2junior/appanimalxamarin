@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
 		xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
@@ -6,30 +6,22 @@
 		prism:ViewModelLocator.AutowireViewModel="True" 
 		x:Class="AppAnimalForms.Views.PetsUsuarioPage" 
 		Title="Meus Pets" 
+		x:Name="PagePets"
 		>
-		<ContentPage.Content>
-		<StackLayout VerticalOptions="FillAndExpand">
-			<ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None"  >
+		<StackLayout>
+			<ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+			<ListView  SeparatorVisibility="None" ItemsSource= "{Binding Pets}" SelectedItem="{Binding Item}" RowHeight="200" >
 				<ListView.ItemTemplate>
 					<DataTemplate>
-						<ViewCell>
-                        <StackLayout BackgroundColor="#eee"
+					<ViewCell >
+						<StackLayout  
                         Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="{Binding Foto}" />
-                                <Label Text="{Binding Nome}"
-                                TextColor="#f35e20" />
-                                <Label Text="{Binding subtitle}"
-                                HorizontalOptions="EndAndExpand"
-                                TextColor="#503026" />
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-
+							<Image  Source="{Binding Foto}"  HeightRequest="150" Aspect="Fill" />
+							<Label Text="{Binding Nome}" TextColor="Lime" FontSize="20" HorizontalTextAlignment="Center"  />
+						</StackLayout>
+					</ViewCell>	
 					</DataTemplate>
 				</ListView.ItemTemplate>
 			</ListView>
 		</StackLayout>
-	</ContentPage.Content>
-	
 </ContentPage>

@@ -1,24 +1,33 @@
-﻿using Prism.Commands;
+﻿using System;
 using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Prism.Navigation;
 
 namespace AppAnimalForms.ViewModels
 {
-	public class DadosUsuarioPageViewModel : BindableBase, INavigationAware
+	public class DadosPetPageViewModel : BindableBase, INavigationAware
 	{
-		public DadosUsuarioPageViewModel()
+		public DadosPetPageViewModel()
 		{
+			Teste = "Ola mundo";
+		}
 
+		private string _teste;
+		public string Teste
+		{
+			get { return _teste; }
+			set {
+				SetProperty(ref _teste, value);
+			}
 		}
 
 		private Pet _petSelecionado;
 		public Pet PetSelecionado
 		{
 			get { return _petSelecionado; }
-			set { SetProperty(ref _petSelecionado, value); }
+			set
+			{
+				SetProperty(ref _petSelecionado, value);
+			}
 		}
 
 

@@ -17,6 +17,9 @@ namespace AppAnimalForms
 		protected override void RegisterTypes()
 		{
 			Container.RegisterTypeForNavigation<MainPage>();
+			Container.RegisterTypeForNavigation<DadosPetPage>();
+			Container.RegisterTypeForNavigation<DadosUsuarioPage>();
+			Container.RegisterTypeForNavigation<PetsUsuarioPage>();
 		}
 	}
 }

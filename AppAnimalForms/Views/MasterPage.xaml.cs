@@ -17,6 +17,7 @@ namespace AppAnimalForms.Views
 
 			var masterPageItens = new List<MasterPageItem>();
 
+			/*
 			masterPageItens.Add(new MasterPageItem
 			{
 				Title = "Login",
@@ -24,13 +25,13 @@ namespace AppAnimalForms.Views
 				TargetType = typeof(PetsUsuarioPage)
 			});
 
-
 			masterPageItens.Add(new MasterPageItem
 			{
 				Title = "Meus Dados",
 				IconSource = "ic_work_white_24dp.png",
 				TargetType = typeof(DadosUsuarioPage)
 			});
+			*/
 
 			masterPageItens.Add(new MasterPageItem
 			{
@@ -39,6 +40,7 @@ namespace AppAnimalForms.Views
 				TargetType = typeof(PetsUsuarioPage)
 			});
 
+			/*
 			masterPageItens.Add(new MasterPageItem
 			{
 				Title = "Busca por qrcode",
@@ -59,7 +61,7 @@ namespace AppAnimalForms.Views
 				IconSource = "ic_add_circle_outline_white_24dp.png",
 				TargetType = typeof(PetsUsuarioPage)
 			});
-
+			*/
 
 
 
