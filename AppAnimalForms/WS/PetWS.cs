@@ -10,39 +10,27 @@ namespace AppAnimalForms
 
 		public List<Pet> Lista { get; set; }
 
+		AzureService<Pet> Service;
+
 		public PetWS()
 		{
+			Service = new AzureService<Pet>();
 		}
 
 		public async Task<List<Pet>> GetPets()
 		{
-			var Service = new AzureService<Pet>();
 			var items = await Service.GetTable();
 			return items.ToList();
 		}
 
-		/*
-		public List<Pet> GetPets()
+		public void InsertPet(Pet p)
 		{
-			Lista = new List<Pet>();
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			Lista.Add(new Pet("Toto", "Bom", "http://www.mytop.fm/wp-content/uploads/2016/09/un-gato-bebe-433.jpg"));
-			return Lista;
+			Service.InsertItem(p);
 		}
-		*/
+
+		public void DeletePet(Pet p)
+		{
+			Service.DeleteItem(p);
+		}
 	}
 }

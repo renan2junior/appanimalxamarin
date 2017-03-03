@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 namespace AppAnimalForms
@@ -22,5 +23,19 @@ namespace AppAnimalForms
 			return Table.ToEnumerableAsync();
 			
 		}
+
+		public void InsertItem(T item)
+		{
+			Table.InsertAsync(item);
+		}
+
+		public void DeleteItem(T item)
+		{
+			Table.DeleteAsync(item);
+		}
+
+
+
+
 	}
 }

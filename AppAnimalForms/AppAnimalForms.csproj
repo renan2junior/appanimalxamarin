@@ -57,6 +57,10 @@
       <DependentUpon>DadosPetPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\DadosPetPageViewModel.cs" />
+    <Compile Include="Views\CadPetPage.xaml.cs">
+      <DependentUpon>CadPetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CadPetPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -75,6 +79,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DadosPetPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CadPetPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

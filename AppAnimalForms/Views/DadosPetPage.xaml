@@ -14,5 +14,6 @@
 		<Entry Text="{Binding PetSelecionado.Nome}" TextColor="Lime" />
 		<Label Text="Descrição :" TextColor="Lime" />
 		<Entry Text="{Binding PetSelecionado.Descricao}" TextColor="Lime" />
+		<Button Text="Apagar" Command="{Binding DeletePetCommand}" />
 	</StackLayout>
 </ContentPage>

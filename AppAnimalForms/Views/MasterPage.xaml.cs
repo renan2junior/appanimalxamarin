@@ -55,17 +55,13 @@ namespace AppAnimalForms.Views
 				TargetType = typeof(PetsUsuarioPage)
 			});
 
+			*/
 			masterPageItens.Add(new MasterPageItem
 			{
-				Title = "Cadastrar Pet",
+				Title = "Cadastrar",
 				IconSource = "ic_add_circle_outline_white_24dp.png",
-				TargetType = typeof(PetsUsuarioPage)
+				TargetType = typeof(CadPetPage)
 			});
-			*/
-
-
-
-
 
 			listView.ItemsSource = masterPageItens;
 

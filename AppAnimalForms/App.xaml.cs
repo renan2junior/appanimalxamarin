@@ -20,6 +20,7 @@ namespace AppAnimalForms
 			Container.RegisterTypeForNavigation<DadosPetPage>();
 			Container.RegisterTypeForNavigation<DadosUsuarioPage>();
 			Container.RegisterTypeForNavigation<PetsUsuarioPage>();
+			Container.RegisterTypeForNavigation<CadPetPage>();
 		}
 	}
 }
