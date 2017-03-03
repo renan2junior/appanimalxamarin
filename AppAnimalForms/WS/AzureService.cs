@@ -34,6 +34,10 @@ namespace AppAnimalForms
 			Table.DeleteAsync(item);
 		}
 
+		public void UpdateItem(T item)
+		{
+			Table.UpdateAsync(item);
+		}
 
 
 

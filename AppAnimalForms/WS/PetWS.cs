@@ -32,5 +32,10 @@ namespace AppAnimalForms
 		{
 			Service.DeleteItem(p);
 		}
+
+		public void UpdatePet(Pet p) 
+		{
+			Service.UpdateItem(p);
+		}
 	}
 }
